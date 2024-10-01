@@ -13,10 +13,10 @@ public class KafkaProducerService {
 
 	private final KafkaTemplate<String, Object> kafkaTemplate;
 
-	@Value("${kafka.max-retries}")
+	@Value("${spring.kafka.max-retries}")
 	private int maxRetries;
 
-	@Value("${kafka.retry-delay-ms}")
+	@Value("${spring.kafka.retry-delay-ms}")
 	private int retryDelayMs;
 
 	public KafkaProducerService(KafkaTemplate<String, Object> kafkaTemplate) {
